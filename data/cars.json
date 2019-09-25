@@ -1,0 +1,128 @@
+[
+    {
+        "id" : 1,
+        "brand" : "Tesla",
+        "model" : "Model 3",
+        "img" : "tesla-model-3.jpg",
+        "price": "$50,000",
+        "dealerPrice": "$48,300",
+        "inventory": 12,
+        "stats" : {
+            "range" : 310,
+            "ramp" : 3.5,
+            "speed" : 155
+        }
+    },
+    {
+        "id" : 2,
+        "brand" : "Audi",
+        "model" : "e-tron",
+        "img" : "audi-e-tron.jpg",
+        "price": "$80,000",
+        "dealerPrice": "$77,600",
+        "inventory": 4,
+        "stats" : {
+            "range" : 210,
+            "ramp" : 5.5,
+            "speed" : 125
+        }
+    },
+    {
+        "id" : 3,
+        "brand" : "BMW",
+        "model" : "i3",
+        "img" : "bmw-i3.jpg",
+        "price": "$45,000",
+        "dealerPrice": "$38,500",
+        "inventory": 19,
+        "stats" : {
+            "range" : 90,
+            "ramp" : 8.2,
+            "speed" : 100
+        }
+    },
+    {
+        "id" : 4,
+        "brand" : "Jaguar",
+        "model" : "iPace",
+        "img" : "jaguar-ipace.jpg",
+        "price": "$85,000",
+        "dealerPrice": "$82,750",
+        "inventory": 12,
+        "stats" : {
+            "range" : 230,
+            "ramp" : 4.5,
+            "speed" : 140
+        }
+    },
+    {
+        "id" : 5,
+        "brand" : "Nissan",
+        "model" : "Bolt",
+        "img" : "nissan-bolt.jpg",
+        "price": "$30,000",
+        "dealerPrice": "$27,975",
+        "inventory": 12,
+        "stats" : {
+            "range" : 225,
+            "ramp" : 8.0,
+            "speed" : 125
+        }
+    },
+    {
+        "id" : 6,
+        "brand" : "Hyundai",
+        "model" : "Kona",
+        "img" : "hyundai-kona.jpg",
+        "price": "$40,000",
+        "dealerPrice": "$36,800",
+        "inventory": 12,
+        "stats" : {
+            "range" : 215,
+            "ramp" : 7.6,
+            "speed" : 125
+        }
+    },
+    {
+        "id" : 7,
+        "brand" : "Volkswagen",
+        "model" : "eGolf",
+        "img" : "vw-egolf.jpg",
+        "price": "$25,000",
+        "dealerPrice": "$24,000",
+        "inventory": 12,
+        "stats" : {
+            "range" : 260,
+            "ramp" : 5.5,
+            "speed" : 135
+        }
+    },
+    {
+        "id" : 8,
+        "brand" : "Renault",
+        "model" : "Zoe",
+        "img" : "renault-zoe.jpg",
+        "price": "$20,000",
+        "dealerPrice": "$18,500",
+        "inventory": 12,
+        "stats" : {
+            "range" : 200,
+            "ramp" : 6,
+            "speed" : 130
+        }
+    },
+    {
+        "id" : 9,
+        "brand" : "Rivian",
+        "model" : "R1T",
+        "img" : "rivian-r1t.jpg",
+        "price": "$75,000",
+        "dealerPrice": "$75,000",
+        "inventory": 12,
+        "stats" : {
+            "range" : 300,
+            "ramp" : 4,
+            "speed" : 150
+        }
+    }
+]

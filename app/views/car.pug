@@ -1,0 +1,31 @@
+extends layout
+
+block content
+      div.container
+        div.row
+            div.col-xl-8.offset-xl-2.my-5
+                h4 #{car.brand}
+                h1 #{car.model}
+                - var img = car.img
+                img(src="/img/" + img class="img-fluid my-3")
+                h1.text-success.text-center #{car.price}
+                div.row.my-5
+                    div.col-xl-4
+                      h3.text-center.text-muted Range 
+                      h2.text-center #{car.stats.range} miles
+                    div.col-xl-4
+                      h3.text-center.text-muted 0-60 mph 
+                      h2.text-center #{car.stats.ramp} seconds
+                    div.col-xl-4
+                      h3.text-center.text-muted Top Speed 
+                      h2.text-center #{car.stats.speed} mph
+                if user.role === "admin"
+                    div.row.my-5.py-5(style="background: #dedede; border-radius: 50px;")
+                        div.col-xl-6
+                            h3.text-center.text-muted Stock 
+                            h2.text-center #{car.inventory}
+                        div.col-xl-6
+                            h3.text-center.text-muted Best Price 
+                            h2.text-center.text-danger #{car.dealerPrice}
+                - var id = car.id
+                a.btn.btn-success.btn-block(href="/car/" + id) Buy Now
