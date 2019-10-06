@@ -1,13 +1,10 @@
-import React, { Component, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 
 import { Row, Col } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import contentData from "../utils/contentData";
 import { useAuth0 } from "../react-auth0-spa";
 
 const Content = () => {
-  const { loading, user, isAuthenticated, loginWithRedirect } = useAuth0();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
   const [cars, setCars] = useState([]);
 
   console.log(isAuthenticated);

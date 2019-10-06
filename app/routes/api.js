@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var cars = require('../../data/cars.json');
+
 var dotenv = require('dotenv');
 const jwt = require('express-jwt');
 const jwtAuthz = require('express-jwt-authz');
@@ -23,8 +25,6 @@ const checkJwt = jwt({
 });
 
 router.get('/api/cars', function (req, res, next) {
-  let cars = require('../../data/cars.json');
-
   res.json(cars);
 });
 
@@ -32,9 +32,8 @@ const checkScopes = jwtAuthz(['read:cars'], {customScopeKey: 'permissions'});
 
 router.get('/api/cars/:id', checkJwt, checkScopes, function (req, res, next) {
   let id = req.params.id;
-  let cars = require('../../data/cars.json');
   let car = cars[id - 1];
-  console.log(req.user.permissions);
+
   if (req.user.permissions.includes('read:admin')) {
     res.json(car);
   } else {

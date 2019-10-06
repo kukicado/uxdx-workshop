@@ -28,15 +28,6 @@ var strategy = new Auth0Strategy(
     // accessToken is the token to call Auth0 API (not needed in the most cases)
     // extraParams.id_token has the JSON Web Token
     // profile has all the information from the user
-    
-    console.log('access');
-    console.log(accessToken);
-    console.log('refresh');
-    console.log(refreshToken);
-    console.log('extra');
-    console.log(extraParams);
-    console.log('profile');
-    console.log(profile);
     profile.role = profile._json['https://ev-store.com/role'];
     return done(null, profile);
   }
@@ -91,6 +82,7 @@ app.use(function (req, res, next) {
 });
 
 app.use(userInViews());
+
 app.use('/', authRouter);
 app.use('/', indexRouter);
 app.use('/', apiRouter);

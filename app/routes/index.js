@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var cars = require('../../data/cars.json');
 var secured = require('../lib/middleware/secured');
 
 router.get('/', function (req, res, next) {
   let data = {};
-  let cars = require('../../data/cars.json');
   console.log(req.user);
   data.title = 'EV Shop';
   data.cars = cars;
@@ -13,7 +13,6 @@ router.get('/', function (req, res, next) {
 
 router.get('/car/:id', secured(), function (req, res, next) {
   let data = {};
-  let cars = require('../../data/cars.json');
   data.car = cars[req.params.id - 1];
   res.render('car', data);
 });
