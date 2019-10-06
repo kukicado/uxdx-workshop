@@ -10,6 +10,7 @@ var flash = require('connect-flash');
 var userInViews = require('./lib/middleware/userInViews');
 var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
+var apiRouter = require('./routes/api');
 var cors = require('cors');
 
 dotenv.load();
@@ -84,6 +85,7 @@ app.use(userInViews());
 
 app.use('/', authRouter);
 app.use('/', indexRouter);
+app.use('/', apiRouter);
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -104,5 +106,4 @@ app.use(function (err, req, res, next) {
   });
 });
 
-//module.exports = app
 app.listen(3000);
