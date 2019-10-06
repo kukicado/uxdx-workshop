@@ -4,7 +4,11 @@
 
 **Objective:**
 
-Learn about the application.
+* Create a .env file
+* Add Middleware
+* Update App.JS
+* Add Authentication Routes
+* Update the UI
 
 # 4 Hour Workshop
 

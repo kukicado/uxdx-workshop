@@ -19,6 +19,7 @@ block content
           div.col-xl-4
             h3.text-center.text-muted Top Speed 
             h2.text-center #{car.stats.speed} mph
+        if user.role === "admin"
           div.col-lg-12.my-5.py-5(style="background: #dedede; border-radius: 50px;")
             div.row
               div.col-xl-6
@@ -27,5 +28,5 @@ block content
               div.col-xl-6
                 h3.text-center.text-muted Best Price 
                 h2.text-center.text-danger #{car.dealerPrice}
-        - var id = car.id
-        a.btn.btn-success.btn-block(href="/car/" + id) Buy Now
+          - var id = car.id
+          a.btn.btn-success.btn-block(href="/car/" + id) Buy Now

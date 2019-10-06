@@ -4,11 +4,33 @@ block content
   div.container
     div.row
       for car in locals.cars
-        div.col-xl-4.my-5
-          h4 #{car.brand}
-          h1 #{car.model}
-          - var img = car.img
-          img(src="/img/" + img class="img-fluid my-3")
-          - var id = car.id
-          h3.text-success #{car.price}
-          a.btn.btn-success(href="/car/" + id) Learn More
+        if car.id != 9
+          div.col-xl-4.my-5
+            h4 #{car.brand}
+            h1 #{car.model}
+            - var img = car.img
+            img(src="/img/" + img class="img-fluid my-3")
+            if user
+              - var id = car.id
+              h3.text-success #{car.price}
+              a.btn.btn-success(href="/car/" + id) Learn More
+            else
+              a.btn.btn-info(href="/login") Log In to View Price
+        else if car.id == 9 && (user && user.role == "secret") || (user && user.role == "admin")
+          div.col-xl-4.my-5
+            h4 #{car.brand}
+            h1 #{car.model}
+            - var img = car.img
+            img(src="/img/" + img class="img-fluid my-3")
+            h3.text-success #{car.price}
+            if locals.user
+              - var id = car.id
+              a.btn.btn-success(href="/car/" + id) Learn More
+            else
+              a.btn.btn-info(href="/login") Log In to View Price
+        else if car.id == 9 && (user && user.role == "member") || !user
+          div.col-xl-4.my-5
+            h4 Exclusive for Apple Members
+            h1 Upcoming EV
+            img(src="/img/secret.jpg" class="img-fluid my-3")
+            h3.text-info Sign In With Apple To Reveal
