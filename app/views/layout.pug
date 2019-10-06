@@ -15,16 +15,5 @@ html
             li.nav-item
               h2 
                 a.nav-link(href="/") Home
-            if locals.user
-              li.nav-item
-                h2
-                  a.nav-link(href="/user") Profile
-              li.nav-item
-                h2
-                  a.nav-link.text-danger(href="/logout") Logout
-            else 
-              li.nav-item
-                h2
-                  a.nav-link(href="/login") Login
 
     block content
