@@ -4,7 +4,6 @@ var cars = require('../../data/cars.json');
 
 router.get('/', function (req, res, next) {
   let data = {};
-  console.log(req.user);
   data.title = 'EV Shop';
   data.cars = cars;
   res.render('index', data);
