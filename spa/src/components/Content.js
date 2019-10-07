@@ -35,7 +35,7 @@ const Content = () => {
           <img className="img-fluid my-3" alt="car" src={"/img/" + hit.img} />
           {isAuthenticated && <div>
             <h3 className="text-success">{hit.price}</h3>
-            <a className="btn btn-success" href={"/car/" + hit.id}>Lear More</a>
+            <a className="btn btn-success" href={"/car/" + hit.id}>Learn More</a>
           </div>}
           {!isAuthenticated && <button className="btn btn-info" onClick={() => loginWithRedirect({})}>Log In to View Price</button>}
         </Col>
